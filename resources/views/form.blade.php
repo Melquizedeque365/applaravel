@@ -4,7 +4,7 @@
 
 <body>
 
-    <p>formulário</p>
+    <p>formulário de Login</p>
     <form action="/api/auth/login" method="POST">
         @csrf
         <input type="email" name="email" className="rounded-sm" placeholder="email"/>

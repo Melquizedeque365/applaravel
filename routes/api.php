@@ -15,9 +15,14 @@ Route::middleware('api')->prefix('auth')->group(function () {
 
 
 
-Route::get('/home', function () {
-  return view('form');
+Route::get('/create', function () {
+  return view('formcreate');
 }); 
+
+Route::get('/ulogin', function () {
+  return view('form');
+});
+
 Route::post('/enviar',[UserController::class,'store']);
 
 Route::get('/data', [UserController::class, 'index']);
