@@ -1,17 +1,25 @@
 <html>
     <head>
-        @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-           @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <title>{{ config('app.name', 'Laravel') }}</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+
+        <!-- Styles / Scripts -->
+        @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
+            @vite(['resources/css/app.css', 'resources/js/app.js'])
         @else
-           <style>
             
-           </style>
         @endif
     </head>
     <body>
+        <div class="">
         <p>formularioário de Cadastro</p>
-        <form action="/api/enviar" method="POST">
+        <form action="/api/enviar" method="POST" >
             @csrf
             <input type="email" name="email" placeholder="email"/>
             <br>
@@ -19,5 +27,6 @@
             <br>
             <input type="submit"/>
         </form>
+        </div>
     </body>
 </html>
