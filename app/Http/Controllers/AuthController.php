@@ -40,8 +40,7 @@ class AuthController extends Controller implements HasMiddleware
     {
         $credentials = $request->only('email', 'password');
         if (! $token = auth('api')->attempt($credentials)) {
-         // return response()->json(['error' => 'Unauthorized'], 401);
-          // return 
+            return response()->json(['error' => 'Unauthorized'], 401);
         }
 
         return $this->respondWithToken($token);
