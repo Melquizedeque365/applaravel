@@ -23,7 +23,7 @@
         <p class="font-bold my-4">Formulário de Cadastro</p>
         <form action="/api/enviar" method="POST" >
             @csrf
-            <input type="email" name="email" placeholder="Email" class="w-90 my-2 py-1 px-2 border border-gray-700 rounded-md text-gray-500"/>
+            <input type="email" name="email" placeholder="Email" class="w-full my-2 py-1 px-2 border border-gray-700 rounded-md text-gray-500"/>
             <br>
             <input type="password" name="password" placeholder="Password" class="w-full my-2 py-1 px-2 border border-gray-700 rounded-md text-gray-500"/>
             <br>
