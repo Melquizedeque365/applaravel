@@ -54,6 +54,10 @@ COPY --from=frontend /app/public/build ./public/build
 # Instalar dependências PHP
 RUN composer install --no-dev --optimize-autoloader
 
+RUN mkdir -p database \
+    && touch database/database.sqlite \
+    && chmod -R 777 database
+
 # Permissões
 RUN chown -R www-data:www-data storage bootstrap/cache
 
