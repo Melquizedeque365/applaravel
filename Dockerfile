@@ -17,7 +17,7 @@ RUN npm run build
 # =========================
 # PHP + Laravel
 # =========================
-FROM php:8.3.35-fpm
+FROM php:8.2.35-fpm
 
 RUN apt-get update && apt-get install -y \
     nginx \
