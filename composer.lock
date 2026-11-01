@@ -21,7 +21,7 @@
                 "shasum": ""
             },
             "require": {
-                "php": "^8.3.35-fdm"
+                "php": "^8.2.35-fdm"
             },
             "require-dev": {
                 "php-coveralls/php-coveralls": "^2.2",
