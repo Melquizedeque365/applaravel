@@ -1,7 +1,7 @@
 # =========================
 # Build frontend
 # =========================
-FROM node:22 AS frontend
+FROM node:22.23.4 AS frontend
 
 WORKDIR /app
 
@@ -17,7 +17,7 @@ RUN npm run build
 # =========================
 # PHP + Laravel
 # =========================
-FROM php:8.3-fpm
+FROM php:8.3.35-fpm
 
 RUN apt-get update && apt-get install -y \
     nginx \
